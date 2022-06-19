@@ -1,0 +1,70 @@
+[
+    {
+   
+      "price": "19",
+      "picture": "https://i.ibb.co/vqbrFf7/ram.jpg",
+      "name": "Sheryl ",
+      "description":"this is sort deitals",
+      "availablequantity":"1400",
+      "minimunOrder":"300"
+
+    },
+    {
+      "price": "56",
+      "picture": "https://i.ibb.co/Tts8t87/ssd.jpg",
+      "name": "Sheryl Potts",
+      "description":"this is sort deitals",
+      "availablequantity":"1400",
+      "minimunOrder":"300"
+
+    },
+    {
+      
+      "price": "86",
+      "picture": "https://i.ibb.co/P6gNsVQ/power-supler.jpg",
+      "name": "Rasmussen Hinton",
+      "description":"this is sort deitals",
+      "availablequantity":"900",
+      "minimunOrder":"300"
+    },
+    {
+   
+      "price": "68",
+      "picture": "https://i.ibb.co/dcK4kYY/cpu-1.jpg",
+      "name": "Olive Golden",
+      "description":"this is sort deitals",
+      "availablequantity":"1300",
+      "minimunOrder":"300"
+    },
+    {
+  
+      "price": "30",
+      "picture": "https://i.ibb.co/TthMSgc/cpu-cooler-1.jpg",
+      "name": "Whitehead Henry",
+      "description":"this is sort deitals",
+      "availablequantity":"1700",
+      "minimunOrder":"300"
+    },
+    {
+    
+      "price": "340",
+      "picture": "https://i.ibb.co/tKKJbWy/cassing.jpg",
+      "name": "Jan Morin",
+      "description":"this is sort deitals",
+      "quantity":"1800",
+      "minimunOrder":"300"
+    },
+    {
+     
+      "price": "27",
+      "picture": "https://i.ibb.co/bvBJJDg/photo1.jpg",
+      "name": "Gamble Mccormick",
+      "description":"this is sort deitals",
+      "availablequantity":"1900",
+      "minimunOrder":"300"
+    }
+  ]
+
+
+
+  

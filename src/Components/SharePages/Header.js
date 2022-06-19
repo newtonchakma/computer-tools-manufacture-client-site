@@ -12,7 +12,7 @@ const Header = () => {
     <li><Link to="/blogs">blogs</Link></li>
     </>
     return (
-        <div class="navbar bg-base-100">
+        <div class="navbar bg-base-100 shadow-lg sticky top-0 z-46 py-5 px-4">
   <div class="navbar-start">
     <div class="dropdown">
       <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -22,7 +22,7 @@ const Header = () => {
       {menuItems}
       </ul>
     </div>
-    <a class="btn btn-ghost normal-case text-xl">cumputer parts</a>
+    <a class=" btn bg-inherit normal-case text-4xl font-bold text-orange-600">CUMPUTER PARTS</a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal p-0">
@@ -31,9 +31,7 @@ const Header = () => {
         {menuItems}
     </ul>
   </div>
-  <div class="navbar-end">
-    <a class="btn">Get started</a>
-  </div>
+  
 </div>
     );
 };
