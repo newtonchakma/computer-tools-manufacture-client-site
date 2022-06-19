@@ -2,11 +2,11 @@ import React from 'react';
 import './Contact.css'
 const Contact = () => {
     return (
-        <div id='contact' className='mb-5 pb-5 h-[520px]'>
+        <div id='contact' className='mb-5 pb-5 px-5 h-[520px]'>
             <div className='my-9 mt-5 pt-5 font-bold text-center'>
-                <h1 className='text-white  mt-5 text-4xl'>Have Any Question? <span className='text-secondary'>Contact Us</span></h1>
+                <h1 className='text-white  mt-5 text-3xl'>Have Any Question? <span className='text-secondary'>Contact Us</span></h1>
             </div>
-            <div className='w-[750] mt-4 pt-5'>
+            <div className='w-[750] mt-4 pt-5 mx-auto max-w-xl'>
                 <form className='mx-auto w-full'>
                 <input type="email" placeholder="Email" class="input w-full max-w-xl shadow-inner" />
                 <div class="flex max-w-xl mt-4 mx-auto">
@@ -16,7 +16,9 @@ const Contact = () => {
                 
                 <textarea class="textarea w-full mt-4 max-w-xl shadow-inner" placeholder="Description"></textarea>
                 <br></br>
+                <div className='mx-auto max-w-xl text-center'>
                 <button class=" btn-wide my-8 text-white btn btn-warning max-w-xl shadow font-bold text-2xl">Send</button>
+                </div>
                 </form>
             </div>
         </div>
