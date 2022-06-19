@@ -1,0 +1,8 @@
+#contact{
+    background-image: url('../../../images/contactBanner.jpg');
+    background-size: cover;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-color: rgba(31, 29, 29, 0.2);
+    background-blend-mode: color;
+}
