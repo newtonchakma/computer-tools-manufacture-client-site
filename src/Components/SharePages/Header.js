@@ -12,7 +12,7 @@ const Header = () => {
     <li><Link to="/blogs">blogs</Link></li>
     </>
     return (
-        <div class="navbar bg-base-100 sticky top-0 shadow-lg z-500 py-5 px-4">
+        <div class="navbar bg-base-100  top-0 shadow-lg py-5 px-4">
   <div class="navbar-start">
     <div class="dropdown">
       <label tabindex="0" class="btn btn-ghost lg:hidden">
