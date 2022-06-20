@@ -11,7 +11,7 @@ const Banner = () => {
                     <br className="hidden lg:inline-block"/> Supirior Quality.
                 </h1>
                 <p className="leading-relaxed md:text-xl text-secondary pl-10 ">We Won Many Industrial Awards and Got Many eritiricates Since 2011-2022</p>
-                <button class="btn btn-wide my-8 btn-outline btn-secondary font-bold text-2xl">JOIN NOW</button>
+                <button className="btn btn-wide my-8 btn-outline btn-secondary font-bold text-2xl">JOIN NOW</button>
             </div>  
         </div>
     </section> 

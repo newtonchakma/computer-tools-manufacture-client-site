@@ -23,7 +23,7 @@ const About = () => {
                 International industrial systems, dedicated to provide the best economical solutions to our valued customers. We Won Many Factory Awards. We have a proven record of accomplishment and are a reputable company.
 
                 </p>
-                <button class="btn w-64 rounded-full btn-warning mt-3 text-white font-bold">get in touch</button>
+                <button className="btn w-64 rounded-full btn-warning mt-3 text-white font-bold">get in touch</button>
 
 
             </div>

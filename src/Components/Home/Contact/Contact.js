@@ -8,16 +8,16 @@ const Contact = () => {
             </div>
             <div className='w-[750] mt-4 pt-5 mx-auto max-w-xl'>
                 <form className='mx-auto w-full'>
-                <input type="email" placeholder="Email" class="input w-full max-w-xl shadow-inner"required />
-                <div class="flex max-w-xl mt-4 mx-auto">
-                   <input type="text" placeholder="FastName" class="input w-full max-w-xs shadow-inner" required />
-                   <input type="text" placeholder="LastName" class="input w-full max-w-xs ml-3 shadow-inner" required/>
+                <input type="email" placeholder="Email" className="input w-full max-w-xl shadow-inner"required />
+                <div className="flex max-w-xl mt-4 mx-auto">
+                   <input type="text" placeholder="FastName" className="input w-full max-w-xs shadow-inner" required />
+                   <input type="text" placeholder="LastName" className="input w-full max-w-xs ml-3 shadow-inner" required/>
                  </div>
                 
-                <textarea class="textarea w-full mt-4 max-w-xl shadow-inner" placeholder="Description" required></textarea>
+                <textarea className="textarea w-full mt-4 max-w-xl shadow-inner" placeholder="Description" required></textarea>
                 <br></br>
                 <div className='mx-auto max-w-xl text-center'>
-                <button class=" btn-wide my-8 text-white btn btn-warning max-w-xl shadow font-bold text-2xl">Send</button>
+                <button className=" btn-wide my-8 text-white btn btn-warning max-w-xl shadow font-bold text-2xl">Send</button>
                 </div>
                 </form>
             </div>
