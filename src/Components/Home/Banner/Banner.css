@@ -2,6 +2,7 @@
     background-image: url('../../../images/banner.jpg');
     background-size: cover;
     background-position: right;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-color: rgba(128, 128, 128, 0.527);
     background-blend-mode: color;

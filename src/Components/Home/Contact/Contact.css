@@ -2,7 +2,8 @@
     background-image: url('../../../images/contactBanner.jpg');
     background-size: cover;
     background-position: right;
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-color: rgba(31, 29, 29, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     background-blend-mode: color;
 }
