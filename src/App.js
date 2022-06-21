@@ -5,6 +5,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import BussnessSumary from './Components/Home/BussnessSumary';
 import Items from './Components/Home/Items/Items/Items';
 import Login from './Components/Home/Login/Login';
+import Loading from './Components/SharePages/Loading';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path='/items' element={<Items/>}></Route>
         <Route path='/bussnessSumary' element={<BussnessSumary></BussnessSumary>}></Route>
       <Route path='/login' element={<Login></Login>}></Route>
+      
       </Routes>
     </div>
   );

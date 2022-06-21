@@ -4,14 +4,14 @@ import about from '../../images/about.jpg'
 const About = () => {
     return (
         <div className='min-h-screen p-5 h-full  sm: h-full'>
-            <div className=' mt-5 pt-5 font-bold text-center'>
-                <h1 className='text-orange-600 mt-5 pt-4 md:text-4xl  text-2xl uppercase'>About Us</h1>
+            <div className=' mt-5 pt-5 mb-4 font-bold text-center'>
+                <h1 className='text-orange-600 mt-5 pt-4 md:text-4xl  text-2xl uppercase '>About Us</h1>
             </div>
        
         <div className='flex mx-4 px-3 mb-3  items-center flex-col lg:flex-row '>
            
             <div className=' w-full justify-center '>
-            <img className='shadow rounded-lg' src={about} alt=""  />
+            <img className='shadow rounded-lg' src={about} alt=" "  />
 
             </div>
             <div className='pl-5  justify-center '>

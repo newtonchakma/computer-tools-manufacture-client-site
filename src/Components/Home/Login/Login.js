@@ -3,6 +3,7 @@ import React from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useForm } from "react-hook-form";
+import Loading from '../../SharePages/Loading';
 
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -14,6 +15,9 @@ const Login = () => {
         error,
       ] = useSignInWithEmailAndPassword(auth);
       let signInError;
+      if( loading || gLoading){
+        return <Loading></Loading>
+    }
     if(gUser){
         console.log(gUser);
     }
@@ -21,9 +25,7 @@ const Login = () => {
         console.log(data);
         signInWithEmailAndPassword(data.email, data.password)
     }
-    if(loading || gLoading){
-        return <button className=' btn-loading'>loading</button>
-    }
+   
 
     if(error || gError){
         signInError= <p className='text-red-500'><small>{error?.message || gError?.message }</small></p>
