@@ -19,6 +19,9 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path='/items' element={<Items/>}></Route>
       <Route path='/purchcase' element={<RequireAuth><Purchcase></Purchcase></RequireAuth>}></Route>
+      <Route path='/item/:id' element={
+      <RequireAuth><Purchcase></Purchcase></RequireAuth>
+      }></Route>
         <Route path='/bussnessSumary' element={<BussnessSumary></BussnessSumary>}></Route>
       <Route path='/login' element={<Login></Login>}></Route>
       <Route path='/signup' element={<SignUp></SignUp>}></Route>

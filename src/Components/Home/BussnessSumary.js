@@ -1,10 +1,10 @@
 import React from 'react';
-import { ArrowBarUp, BoxSeam, CheckCircle, People } from 'react-bootstrap-icons';
+import {  BoxSeam, CheckCircle, People } from 'react-bootstrap-icons';
 
 const BussnessSumary = () => {
     return (
-        <section className="text-gray-600 ">
-        <div className="container py-24 mx-auto">
+     
+        <div className="container py-24 mx-auto text-gray-600">
             <div className="flex flex-col text-center w-full mb-10">
             <h1 className=" font-medium text-5xl font-bold  mb-4 text-orange-600 uppercase">Bussness-Sumary</h1>
             </div>         
@@ -35,7 +35,7 @@ const BussnessSumary = () => {
            
             </div>
         </div>
-    </section>
+    
     );
 };
 

@@ -6,7 +6,7 @@ const Item = ({product}) => {
     const navigate = useNavigate();
 
     const itemDetails = id =>{
-       navigate(`/product/${id}`)
+       navigate(`/item/${id}`)
        console.log(id);
     }
     return (

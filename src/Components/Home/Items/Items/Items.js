@@ -10,8 +10,10 @@ useEffect(()=>{
     .then(data=>setProducts(data))
 },[])
     return (
-        <div>
-            <h1>Inventory Products:{products.length}</h1>
+        <div className='py-24'>
+            <div className="flex flex-col text-center w-full mb-10">
+            <h1 className=" font-medium text-5xl font-bold  mb-4 text-orange-600 uppercase">PRODUCTS</h1>
+            </div> 
             <div className='container '>
                 <div className='grid grid-cols-1 gap-8 md:grid-cols-2 px-5'>
                     {
