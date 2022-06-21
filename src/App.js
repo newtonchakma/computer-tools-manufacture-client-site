@@ -5,7 +5,9 @@ import { Routes, Route, Link } from "react-router-dom";
 import BussnessSumary from './Components/Home/BussnessSumary';
 import Items from './Components/Home/Items/Items/Items';
 import Login from './Components/Home/Login/Login';
-import Loading from './Components/SharePages/Loading';
+import SignUp from './Components/Home/Login/SignUp';
+import RequireAuth from './Components/SharePages/RequireAuth';
+import Purchcase from './Components/Pages/Purchcase';
 
 
 function App() {
@@ -14,9 +16,12 @@ function App() {
      <Header></Header>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path='/items' element={<Items/>}></Route>
+      <Route path='/purchcase' element={<RequireAuth><Purchcase></Purchcase></RequireAuth>}></Route>
         <Route path='/bussnessSumary' element={<BussnessSumary></BussnessSumary>}></Route>
       <Route path='/login' element={<Login></Login>}></Route>
+      <Route path='/signup' element={<SignUp></SignUp>}></Route>
       
       </Routes>
     </div>

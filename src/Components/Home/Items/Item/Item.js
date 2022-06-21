@@ -5,8 +5,8 @@ const Item = ({product}) => {
     const {price,picture,name,description,availablequantity,minimunOrder,_id }=product
     const navigate = useNavigate();
 
-    const updateToProduct = id =>{
-      // navigate(`/product/${id}`)
+    const itemDetails = id =>{
+       navigate(`/product/${id}`)
        console.log(id);
     }
     return (
@@ -22,7 +22,7 @@ const Item = ({product}) => {
     <p></p>
     <p>{description}</p>
     <div className="card-actions md:justify-end sm:justify-center">
-      <button to='/inventory'  onClick={()=> updateToProduct(_id)} className="btn btn-warning btn-sm">Listen</button>
+      <button to='/purchcase'  onClick={()=> itemDetails(_id)} className="btn btn-warning btn-sm">Order</button>
     </div>
   </div>
 </div>
