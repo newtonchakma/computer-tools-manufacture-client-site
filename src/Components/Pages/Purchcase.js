@@ -58,6 +58,7 @@ const Purchcase = () => {
             itemName: item.name,
             orderEmail: user.email,
             OrderName: user.displayName,
+            totalOrders: orderQuantity,
             phone: event.target.phone.value,
             address: event.target.address.value,
             totalPrice : price

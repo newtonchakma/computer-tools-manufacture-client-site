@@ -13,6 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
 import MyOrder from './Components/Pages/Dashboard/MyOrder';
 import MyReview from './Components/Pages/Dashboard/MyReview';
+import Footer from './Components/SharePages/Footer';
 
 
 
@@ -48,6 +49,7 @@ function App() {
       </Routes>
       
       <ToastContainer />
+      <Footer></Footer>
     </div>
   );
 }
