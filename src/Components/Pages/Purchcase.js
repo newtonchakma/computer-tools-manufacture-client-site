@@ -2,58 +2,109 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
 import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
+import { set } from 'react-hook-form';
+
 
 const Purchcase = () => {
     const {id} = useParams();
     const [item, setItem] =useState({})
+    const [reload, setReload] =useState(true)
     const [user] = useAuthState(auth);
 
     useEffect(()=>{
        const url =(`http://localhost:5000/service/${id}`);
-       console.log(url)
+       console.log('pre',url)
        fetch(url)
        .then(res=>res.json())
        .then(data=>setItem(data))
 
-    },[id])
+    },[id, reload])
+
+   
+/* 
+      const UpdateQuantity = (newQuantity)=>{
+        const url =(`http://localhost:5000/service`);
+        console.log('update', url);
+        fetch(url,{
+            method:'PUT',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify({newQuantity})
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log('update',data);
+            setReload(!reload)
+        })
+      } */
 
     
     const handleBooking =(event)=>{
         event.preventDefault()
+       
+        const stockQuantity = parseInt(item.availablequantity);
+        const minimunOrder =parseInt(item.minimunOrder);
+        const orderQuantity = event.target.number.value;
+        if(orderQuantity < minimunOrder || orderQuantity > stockQuantity){
+            return toast.error("Please chack stock and minimunOrder Quantity")
+        }else{
+            const price = orderQuantity * parseInt(item.price)
+            console.log(price);
+        
         const order = {
             itemId: item._id,
             itemName: item.name,
-            price: item.price,
             orderEmail: user.email,
             OrderName: user.displayName,
             phone: event.target.phone.value,
-            order: event.target.number.value,
-            address: event.target.address.value
+            address: event.target.address.value,
+            totalPrice : price
         }
+        console.log(order);
 
         fetch(`http://localhost:5000/orders`,{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(order)
+            body: JSON.stringify(order),
         })
         .then(res =>res.json())
         .then(data=>{
             console.log(data);
-        
+            if(data.success){
+                toast('Order successfully')
+            }
+            else{
+                toast.error('Allready order')
+            } 
         
         })
     }
+
+        //update quanrrity
+       /*  const previousQuantity = item.availablequantity;
+        const newQuantity = previousQuantity - parseInt(event.target.number.value);
+        console.log(newQuantity);
+        UpdateQuantity(newQuantity) */
+    }
     return (
-        <div>
-            <h1 className='text-5xl text-center'>this in private route:{item.name}</h1>
+        <div className='py-5 my-4'>
+            <div class="card card-side bg-base-100 shadow-xl">
+               <figure><img src={item.picture} alt={item.name}/></figure>
+                 <div class="card-body">
+                   <h2 class="card-title"><strong>{item.name}</strong></h2>
+                    <p>price: <span>$</span>{item.price}</p>
+                    <p>Available: {item.availablequantity}</p>
+                    <p>Minimun Order: {item.minimunOrder}</p>
+                 
+             </div>
+        </div>
 
             <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 justify-items-center mt-2'>
-              <h3 className="font-bold text-lg text-secondary">Booking for: {item.name}</h3>
-              <h3 className="font-bold text-lg text-secondary">Available items: {item.availablequantity}</h3>
-                        <label><strong>Price :</strong></label>
-                        <input type="text" value={item.price}  className="input input-bordered w-full max-w-xs" />
+                      {/*   <input type="text" value={item.price}  className="input input-bordered w-full max-w-xs" /> */}
                         
                         <input type="text" name="name" disabled ='true' value={user?.displayName || ' '} className="input input-bordered w-full max-w-xs" />
 
@@ -61,7 +112,7 @@ const Purchcase = () => {
 
                         <input type="text" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" required/>
 
-                        <input type="text" name="number"  placeholder='minimun order 300'  className="input input-bordered w-full max-w-xs" required />
+                        <input type="number" name="number"  placeholder='minimun order 300'  className="input input-bordered w-full max-w-xs" required />
 
                         <input type="text" name="address" placeholder='Address'  className="input input-bordered w-full max-w-xs" required />
                        
