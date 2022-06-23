@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const MyOrder = () => {
     
@@ -18,7 +20,7 @@ const MyOrder = () => {
         }
       },[user])
     return (
-        <div className='mt-5 pt-5 px-3'>
+        <div className=' px-3'>
       <div className='text-center'>
       <h2 className=" font-medium text-2xl font-bold  mb-4 text-orange-600 uppercase">My Total Orders: {myOrders.length} pcs</h2>
       </div>
@@ -28,10 +30,11 @@ const MyOrder = () => {
     <thead>
       <tr>
         <th></th>
-        <th>Name</th>
+        <th>Product Name</th>
         <th>Email</th>
         <th>totalOrder</th>
         <th>Price</th>
+        <th>delete</th>
       </tr>
     </thead>
     <tbody className=''>
@@ -42,8 +45,10 @@ const MyOrder = () => {
         <td>{item.orderEmail}</td>
         
         <td>{item.totalOrders}</td>
-        <td>{item.totalPrice}</td>
-        
+        <td><strong>$ </strong>{item.totalPrice}</td>
+        <td>
+    <FontAwesomeIcon  className='text-danger icon-size' icon={faTrash}  />
+    </td>
         
       </tr>
         

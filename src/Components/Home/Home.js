@@ -1,10 +1,10 @@
 import React from 'react';
-import Footer from '../SharePages/Footer';
 import About from './About';
 import Banner from './Banner/Banner';
 import BussnessSumary from './BussnessSumary';
 import Contact from './Contact/Contact';
 import Items from './Items/Items/Items';
+import UserReview from './UserReview';
 
 
 const Home = () => {
@@ -13,10 +13,11 @@ const Home = () => {
           <Banner></Banner>
           <Items></Items>
           <BussnessSumary></BussnessSumary>
+           <UserReview></UserReview> 
           <Contact></Contact>
           <About></About>
         
-          <Footer></Footer>
+          
 
         </div>
     );
