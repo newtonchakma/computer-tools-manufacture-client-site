@@ -18,6 +18,7 @@ const Header = () => {
     <li><Link to="/businessSummary">BUSINESS SUMMARY</Link></li>
     <li><Link to="/purchase">PUCHASE</Link></li>
     <li><Link to="/blogs">blogs</Link></li>
+    <li><Link to="/myprofile">Myprofile</Link></li>
     
        { user && <li><Link to="/dashboard">DASHBOARD</Link></li>}
     

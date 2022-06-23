@@ -14,6 +14,7 @@ import Dashboard from './Components/Pages/Dashboard/Dashboard';
 import MyOrder from './Components/Pages/Dashboard/MyOrder';
 import MyReview from './Components/Pages/Dashboard/MyReview';
 import Footer from './Components/SharePages/Footer';
+import MyProfile from './Components/Pages/MyProfile';
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path='/items' element={<Items/>}></Route>
+        <Route path='/myprofile' element={<MyProfile/>}></Route>
       <Route path='/purchcase' element={<RequireAuth><Purchcase></Purchcase></RequireAuth>}></Route>
      
       <Route path='/dashboard' element={
