@@ -16,6 +16,7 @@ import MyReview from './Components/Pages/Dashboard/MyReview';
 import Footer from './Components/SharePages/Footer';
 import MyProfile from './Components/Pages/MyProfile';
 import Users from './Components/Pages/Dashboard/Users';
+import RequireAdmin from './Components/SharePages/RequireAdmin';
 
 
 
@@ -39,7 +40,7 @@ function App() {
     }>
       <Route index element={<MyOrder></MyOrder>}></Route>
       <Route path='review' element={<MyReview></MyReview>}></Route>
-      <Route path='users' element={<Users></Users>}></Route>
+      <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
       
     </Route>
 

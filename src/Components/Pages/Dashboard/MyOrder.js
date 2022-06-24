@@ -3,8 +3,9 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
+import axios from 'axios';
 
 const MyOrder = () => {
     
@@ -34,6 +35,25 @@ const MyOrder = () => {
           //.then(data => console.log(data))
         }
       },[user])
+
+
+      const deleteButton = (id) => {
+        const proced = window.confirm("Are You Agree For Delete ?")
+        if (proced) {
+          const url = `http://localhost:5000/orders/${id}`
+          fetch(url, {
+            method: "DELETE",
+            headers: {
+              "authorization": `bearer ${localStorage.getItem("AccessToken")}`
+            }
+          })
+            .then(res => res.json())
+            .then(data => {
+              console.log(data);
+            })
+          
+        } 
+      }
     return (
         <div className=' px-3'>
       <div className='text-center'>
@@ -61,9 +81,11 @@ const MyOrder = () => {
         
         <td>{item.totalOrders}</td>
         <td><strong>$ </strong>{item.totalPrice}</td>
-        <td>
-    <FontAwesomeIcon  className='text-danger icon-size' icon={faTrash}  />
-    </td>
+       
+       
+        {item.payment === "paid" ? <Link to={''}><td><button disabled readOnly onClick={() => deleteButton(item._id)} className="btn btn-sm btn-warning" >Cancel</button></td></Link> : <Link to={''}><td><button onClick={() => deleteButton(item._id)} className="btn btn-sm bg-red-600" >Cancel</button></td></Link>}
+
+  
         
       </tr>
         
