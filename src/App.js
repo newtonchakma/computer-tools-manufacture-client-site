@@ -15,6 +15,7 @@ import MyOrder from './Components/Pages/Dashboard/MyOrder';
 import MyReview from './Components/Pages/Dashboard/MyReview';
 import Footer from './Components/SharePages/Footer';
 import MyProfile from './Components/Pages/MyProfile';
+import Users from './Components/Pages/Dashboard/Users';
 
 
 
@@ -38,6 +39,7 @@ function App() {
     }>
       <Route index element={<MyOrder></MyOrder>}></Route>
       <Route path='review' element={<MyReview></MyReview>}></Route>
+      <Route path='users' element={<Users></Users>}></Route>
       
     </Route>
 
