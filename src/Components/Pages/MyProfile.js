@@ -3,7 +3,7 @@ import aboutme from '../../images/aboutMe.png'
 
 const MyProfile = () => {
     return (
-        <div className="hero min-h-screen bg-base-200 py-24">
+        <div className="hero min-h-screen py-24">
             <div className="hero-content flex-col lg:flex-row">
                  <img className='rounded-lg shadow' src={aboutme} data-aos="zoom-in" alt='newton'/> 
                 <div data-aos="zoom-out">

@@ -20,26 +20,6 @@ const Purchcase = () => {
        .then(data=>setItem(data))
 
     },[id, reload])
-
-   
-/* 
-      const UpdateQuantity = (newQuantity)=>{
-        const url =(`http://localhost:5000/service`);
-        console.log('update', url);
-        fetch(url,{
-            method:'PUT',
-            headers:{
-                'content-type':'application/json'
-            },
-            body:JSON.stringify({newQuantity})
-        })
-        .then(res=>res.json())
-        .then(data=>{
-            console.log('update',data);
-            setReload(!reload)
-        })
-      } */
-
     
     const handleBooking =(event)=>{
         event.preventDefault()

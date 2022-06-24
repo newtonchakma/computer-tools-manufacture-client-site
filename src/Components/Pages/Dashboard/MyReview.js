@@ -38,9 +38,15 @@ const MyReview = () => {
             })
     }
     return (
-        <div className="hero h-screen">
+        <>
+          <h2 className=" font-medium text-2xl font-bold text-orange-600 uppercase">please add a review</h2>
+        <div className="hero  h-screen">
+        
+          
+     
         <div className="hero-content orderCard" >
-
+        
+      
             <div className="card shadow-2xl bg-base-100" style={{ width: "100%" }} data-aos="zoom-out-up">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="card-body">
@@ -82,6 +88,7 @@ const MyReview = () => {
             </div>
         </div>
     </div>
+    </>
     );
 };
 
