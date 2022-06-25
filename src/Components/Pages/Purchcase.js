@@ -64,11 +64,7 @@ const Purchcase = () => {
         })
     }
 
-        //update quanrrity
-       /*  const previousQuantity = item.availablequantity;
-        const newQuantity = previousQuantity - parseInt(event.target.number.value);
-        console.log(newQuantity);
-        UpdateQuantity(newQuantity) */
+      
     }
     return (
         <div className='py-5 my-4'>

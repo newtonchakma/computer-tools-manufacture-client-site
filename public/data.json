@@ -3,8 +3,8 @@
    
       "price": "19",
       "picture": "https://i.ibb.co/vqbrFf7/ram.jpg",
-      "name": "Sheryl ",
-      "description":"this is sort deitals",
+      "name": "Patriot 4GB DDR3 1600 Bus Desktop Ram ",
+      "description":"Model Patriot 4GB DDR3 1600 Bus Frequency: 1600MHz Operating voltage:1.5V Type: 240 pin",
       "availablequantity":"1400",
       "minimunOrder":"300"
 
@@ -12,8 +12,8 @@
     {
       "price": "56",
       "picture": "https://i.ibb.co/Tts8t87/ssd.jpg",
-      "name": "Sheryl Potts",
-      "description":"this is sort deitals",
+      "name": "Netac N535S 120GB 2.5-inch SATAIII SSD",
+      "description":"Read Speed: 560MB/s Write Speed: 520MB/ Interface: SATA",
       "availablequantity":"1400",
       "minimunOrder":"300"
 
@@ -31,8 +31,8 @@
    
       "price": "68",
       "picture": "https://i.ibb.co/dcK4kYY/cpu-1.jpg",
-      "name": "Olive Golden",
-      "description":"this is sort deitals",
+      "name": "Intel 9th Gen Core i5-9500 Processor ",
+      "description":"Clock Speed 3.00 GHz up to 4.40 GHz Cores-6 & Threads-69MB Smart Cache Intel UHD Graphics 630",
       "availablequantity":"1300",
       "minimunOrder":"300"
     },
@@ -40,8 +40,8 @@
   
       "price": "30",
       "picture": "https://i.ibb.co/TthMSgc/cpu-cooler-1.jpg",
-      "name": "Whitehead Henry",
-      "description":"this is sort deitals",
+      "name": "Deepcool GAMMA ARCHER CPU Air Cooler",
+      "description":"Long lifespan & excellent cooling performance High quality aluminum extrusions Fan Speed 1600Â±10%RPM",
       "availablequantity":"1700",
       "minimunOrder":"300"
     },
@@ -49,20 +49,12 @@
     
       "price": "340",
       "picture": "https://i.ibb.co/tKKJbWy/cassing.jpg",
-      "name": "Jan Morin",
-      "description":"this is sort deitals",
+      "name": "Delux DLC-DW301 ATX Mid Tower Thermal Casing",
+      "description":"200W PSU included Mid Tower Casing Thermal Insulator Supports Various Accessories",
       "quantity":"1800",
       "minimunOrder":"300"
-    },
-    {
-     
-      "price": "27",
-      "picture": "https://i.ibb.co/bvBJJDg/photo1.jpg",
-      "name": "Gamble Mccormick",
-      "description":"this is sort deitals",
-      "availablequantity":"1900",
-      "minimunOrder":"300"
     }
+   
   ]
 
 

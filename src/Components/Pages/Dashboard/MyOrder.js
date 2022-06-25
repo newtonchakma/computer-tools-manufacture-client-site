@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
-import axios from 'axios';
+
 
 const MyOrder = () => {
     
@@ -54,6 +52,15 @@ const MyOrder = () => {
           
         } 
       }
+     /*  const ShippingConfirm = () => {
+        if (item.shipping === "confirm" && item.payment === 'paid') {
+          return <h1 className='text-success'><span className='shippingDone'><span>Shipping</span><span>Confirmed</span> </span></h1>
+        }
+        if (item.payment === 'paid' && !item.shipping) {
+          return <h1 className='text-warning'><span className='shippingDone'><span>Waiting For</span><span>Shipping</span></span></h1>
+        } */
+    
+      
     return (
         <div className=' px-3'>
       <div className='text-center'>
@@ -82,7 +89,8 @@ const MyOrder = () => {
         <td>{item.totalOrders}</td>
         <td><strong>$ </strong>{item.totalPrice}</td>
        
-       
+        {item.payment === "paid" ? <Link to={''}><td><button disabled readOnly className="btn btn-sm btn-success">Paid</button></td></Link> : <Link to={`/dashboard/payment/${item._id}`}><td><button className="btn btn-sm btn-warning">Pay</button></td></Link>}
+        
         {item.payment === "paid" ? <Link to={''}><td><button disabled readOnly onClick={() => deleteButton(item._id)} className="btn btn-sm btn-warning" >Cancel</button></td></Link> : <Link to={''}><td><button onClick={() => deleteButton(item._id)} className="btn btn-sm bg-red-600" >Cancel</button></td></Link>}
 
   

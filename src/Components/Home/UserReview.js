@@ -14,7 +14,7 @@ const UserReview = () => {
     return (
         <div className='py-24'>
         <div className="flex flex-col text-center w-full mb-10">
-        <h1 className=" font-medium text-5xl font-bold  mb-4 text-orange-600 uppercase">review:{reviews.length}</h1>
+        <h1 className=" font-medium text-3xl font-bold  mb-4 text-orange-600 uppercase">Check What Customers Are Saying About Us</h1>
         </div> 
         <div className='container '>
             <div className='grid grid-cols-1 gap-8 md:grid-cols-3 px-5'>
