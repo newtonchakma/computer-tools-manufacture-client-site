@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
+import { useQuery } from 'react-query';
 import Loading from '../../SharePages/Loading';
 import {loadStripe} from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
@@ -10,7 +10,7 @@ const stripePromise = loadStripe('pk_test_51LETruKJfoLuIOks7B68Sx4DKNEXsBDj0dVKR
 const Payment = () => {
     
     const {id} =useParams()
-    const url =`http://localhost:5000/orders/${id}`
+    const url =` https://infinite-shelf-47553.herokuapp.com/orders/${id}`
   
 
     const { isLoading, error, data:item } = useQuery(['orders',id], () =>

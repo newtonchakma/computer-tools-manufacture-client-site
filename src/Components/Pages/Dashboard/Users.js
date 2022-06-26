@@ -6,7 +6,7 @@ import User from './User';
 const Users = () => {
    const [users, setUsers] = useState([]);
    useEffect(()=>{
-     fetch(`http://localhost:5000/user`,{
+     fetch(` https://infinite-shelf-47553.herokuapp.com/user`,{
         method:'GET',
         headers:{
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

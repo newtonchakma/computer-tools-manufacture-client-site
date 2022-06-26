@@ -10,7 +10,7 @@ const UpDateProfile = () => {
   const [profile, setProfie] = useState([])
 
   const email = user?.email;
-  const url = `http://localhost:5000/profile?email=${email}`;
+  const url = ` https://infinite-shelf-47553.herokuapp.com/profile?email=${email}`;
   useEffect(() => {
     const getMyItems = async () => {
       const { data } = await axios.get(url, {
@@ -35,7 +35,7 @@ const UpDateProfile = () => {
     }
     console.log(profile);
 
-    fetch('http://localhost:5000/profile', {
+    fetch(' https://infinite-shelf-47553.herokuapp.com/profile', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

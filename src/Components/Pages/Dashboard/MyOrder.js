@@ -14,7 +14,7 @@ const MyOrder = () => {
 
     useEffect(()=>{
         if(user){
-          fetch(`http://localhost:5000/orders?orderEmail=${user.email}`,{
+          fetch(` https://infinite-shelf-47553.herokuapp.com/orders?orderEmail=${user.email}`,{
             method:'GET',
             headers:{
               'authorization':`Bwarer ${localStorage.getItem('accessToken')}`
@@ -38,7 +38,7 @@ const MyOrder = () => {
       const deleteButton = (id) => {
         const proced = window.confirm("Are You Agree For Delete ?")
         if (proced) {
-          const url = `http://localhost:5000/orders/${id}`
+          const url = ` https://infinite-shelf-47553.herokuapp.com/orders/${id}`
           fetch(url, {
             method: "DELETE",
             headers: {
@@ -52,14 +52,7 @@ const MyOrder = () => {
           
         } 
       }
-     /*  const ShippingConfirm = () => {
-        if (item.shipping === "confirm" && item.payment === 'paid') {
-          return <h1 className='text-success'><span className='shippingDone'><span>Shipping</span><span>Confirmed</span> </span></h1>
-        }
-        if (item.payment === 'paid' && !item.shipping) {
-          return <h1 className='text-warning'><span className='shippingDone'><span>Waiting For</span><span>Shipping</span></span></h1>
-        } */
-    
+   
       
     return (
         <div className=' px-3'>

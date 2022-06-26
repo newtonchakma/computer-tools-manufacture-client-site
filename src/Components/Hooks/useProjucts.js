@@ -5,7 +5,7 @@ const useProjucts = () => {
     const [products,setProducts] = useState([])
     useEffect(()=>{
         (async ()=>{
-            const url =`http://localhost:5000/service`;
+            const url =` https://infinite-shelf-47553.herokuapp.com/service`;
             const {data}= await axios.get(url);
             setProducts(data.result)
         })();

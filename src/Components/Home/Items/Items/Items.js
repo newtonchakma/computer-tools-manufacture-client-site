@@ -5,7 +5,7 @@ import Item from '../Item/Item';
 const Items = () => {
 const [products,setProducts]=useState([])
 useEffect(()=>{
-    fetch(`http://localhost:5000/service`)
+    fetch(` https://infinite-shelf-47553.herokuapp.com/service`)
     .then(res=>res.json())
     .then(data=>setProducts(data))
 },[])

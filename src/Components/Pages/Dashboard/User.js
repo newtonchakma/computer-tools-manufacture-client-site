@@ -5,7 +5,7 @@ import Loading from '../../SharePages/Loading';
 const User = ({user,index}) => {
     const {email, role}= user;
     const makeAdmin = ()=>{
-        fetch(`http://localhost:5000/user/admin/${email}`,{
+        fetch(` https://infinite-shelf-47553.herokuapp.com/user/admin/${email}`,{
             method: 'put',
             headers:{
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { success } from 'daisyui/src/colors';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import { useNavigate } from 'react-router-dom';
 import Item from '../../Home/Items/Item/Item';
-const axios = require('axios').default;
+
 
 
 const CheckoutForm = ({item}) => {
@@ -17,11 +16,11 @@ const CheckoutForm = ({item}) => {
     const navigate = useNavigate()
 
     useEffect(()=>{
-        fetch('http://localhost:5000/create-payment-intent',{
+        fetch(' https://infinite-shelf-47553.herokuapp.com/create-payment-intent',{
             method:'POST',
             headers: {
                 'content-trype': 'application/json',
-                "authorization": `bearer ${localStorage.getItem("AccessToken")}`
+               /*  "authorization": `bearer ${localStorage.getItem("AccessToken")}` */
               },
               body:JSON.stringify({totalPrice})
         })

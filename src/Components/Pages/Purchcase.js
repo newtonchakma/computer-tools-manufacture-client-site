@@ -12,7 +12,7 @@ const Purchcase = () => {
     const [user] = useAuthState(auth);
 
     useEffect(()=>{
-       const url =(`http://localhost:5000/service/${id}`);
+       const url =(` https://infinite-shelf-47553.herokuapp.com/service/${id}`);
        console.log('pre',url)
        fetch(url)
        .then(res=>res.json())
@@ -44,7 +44,7 @@ const Purchcase = () => {
         }
         console.log(order);
 
-        fetch(`http://localhost:5000/orders`,{
+        fetch(` https://infinite-shelf-47553.herokuapp.com/orders`,{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'
@@ -54,8 +54,8 @@ const Purchcase = () => {
         .then(res =>res.json())
         .then(data=>{
             console.log(data);
-            if(data.success){
-                toast('Order successfully')
+            if(data){
+                toast.success('Order successfully')
             }
             else{
                 toast.error('Allready order')

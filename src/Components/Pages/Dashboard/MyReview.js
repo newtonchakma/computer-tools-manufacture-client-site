@@ -25,7 +25,7 @@ const MyReview = () => {
                         img:image
                     }
                     console.log('review', reviewDetails);
-                    axios.post("http://localhost:5000/reviews",reviewDetails)
+                    axios.post(" https://infinite-shelf-47553.herokuapp.com/reviews",reviewDetails)
                     .then(res=>{
                         
                             toast.success("Thanks For Your Review")
