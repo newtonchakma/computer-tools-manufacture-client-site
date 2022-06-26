@@ -28,7 +28,7 @@ const MyProfile = () => {
                     <a target="_blank" href="">Computer shop</a>
                     </li>
                     <li className='ml-8' style={{textAlign:"start"}}>
-                    <a target="_blank" href="">computer parts</a>
+                    <a target="_blank" href="https://computer-tools-manufacture.web.app/">computer parts</a>
                     </li>
                     
                 </div>
