@@ -54,8 +54,6 @@ function App() {
       <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
       
     </Route>
-
-
       <Route path='/item/:id' element={
       <RequireAuth><Purchcase></Purchcase></RequireAuth>
       }></Route>
