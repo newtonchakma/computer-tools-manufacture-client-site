@@ -8,7 +8,7 @@ const User = ({user,index}) => {
         fetch(` https://infinite-shelf-47553.herokuapp.com/user/admin/${email}`,{
             method: 'put',
             headers:{
-                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                authorization: `Bearer ${localStorage.getItem('AccessToken')}`
             }
         })
         .then(res=>{

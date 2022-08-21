@@ -6,19 +6,20 @@ import {loadStripe} from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import CheckoutForm from './CheckoutForm';
 
-const stripePromise = loadStripe('pk_test_51LETruKJfoLuIOks7B68Sx4DKNEXsBDj0dVKRVu0ewGgzNKyqDbRqiYVeA1x3M1Eee9Y3SUjBGSxXzbTBedvlII600hR5MPAy5');
+const stripePromise = loadStripe('pk_test_51LXyPFISELlxw7OVoM7wAtrdTW9LMJVk162rrVqiOEl12dRnUgPBGcwj9a5csDeiV8GqFuW58JZ6WCyKEBFZdEFV00ugKk0E63');
+
 const Payment = () => {
     
     const {id} =useParams()
-    const url =` https://infinite-shelf-47553.herokuapp.com/orders/${id}`
-  
-
-    const { isLoading, error, data:item } = useQuery(['orders',id], () =>
+    //const url =`http://localhost:5000/orders/${id}`
+    const url =`http://localhost:5000/orders/${id}`;
+console.log('uri',url);
+    const { isLoading,  data:item } = useQuery(['orders',id], () =>
     fetch(url, {
         method: "GET",
-        headers: {
-        //   "authorization": `bearer ${localStorage.getItem("AccessToken")}`
-        }
+         headers: {
+        //    "authorization": `bearer ${localStorage.getItem("AccessToken")}`
+        }   
       })
     
     .then(res =>
@@ -31,31 +32,31 @@ if (isLoading) {
 }
 
     return (
-        <div>
-            <h1>please oayment:{id}</h1>
-        <div className="hero min-h-screen" style={{background:"whitesmoke"}} >
-            <div className="hero-content" style={{ flexDirection: "column" }}>
+        <div className=' text-center'>
+            <h1>please payment:{id}</h1>
 
-                <div className="card w-96 bg-base-100 shadow-xl orderCard" data-aos="fade-down">
-                    <div className="card-body">
-                        <h2 className="card-title text-primary"> pay for {item.result.itemName}</h2>
-                        <h2 className="card-title text-primary"> please pay : ${item.result.totalPrice}</h2>
-                        
-                    </div>
-                </div>
-                <div>
-                    <div className="card w-96 bg-base-100 shadow-xl orderCard" data-aos="fade-up">
-                        <div className="card-body">
-                        <Elements stripe={stripePromise}>
-                                    <CheckoutForm  item={item}></CheckoutForm>
-                                </Elements>
-                        </div>
-                    </div>
-                </div>
+           <div class="card w-50 my-12 max-w-md bg-base-100 shadow-xl">
+              <div class="card-body">
+                <h2 class="card-title">pay for: {item.itemName}</h2>  
+                <h2 class="card-title">please pay: ${item.totalPrice}</h2>  
+
+  
             </div>
-        </div>
-    </div>
+          </div>
+          <div class="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
+              <div class="card-body">
+                 <Elements stripe={stripePromise}>
+                 <CheckoutForm  item={item}/>
+                 </Elements>
+    
+              </div>
+           </div>
+         </div>
+
     );
 };
 
 export default Payment;
+
+
+

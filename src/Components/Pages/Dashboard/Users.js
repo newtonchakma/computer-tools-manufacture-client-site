@@ -9,7 +9,7 @@ const Users = () => {
      fetch(` https://infinite-shelf-47553.herokuapp.com/user`,{
         method:'GET',
         headers:{
-            authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            authorization: `Bearer ${localStorage.getItem('AccessToken')}`
         }
      })
     .then(res=>res.json())

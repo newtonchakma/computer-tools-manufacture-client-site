@@ -69,6 +69,7 @@ const MyOrder = () => {
         <th>Email</th>
         <th>totalOrder</th>
         <th>Price</th>
+        <th>payment</th>
         <th>delete</th>
       </tr>
     </thead>
@@ -86,7 +87,14 @@ const MyOrder = () => {
         
         {item.payment === "paid" ? <Link to={''}><td><button disabled readOnly onClick={() => deleteButton(item._id)} className="btn btn-sm btn-warning" >Cancel</button></td></Link> : <Link to={''}><td><button onClick={() => deleteButton(item._id)} className="btn btn-sm bg-red-600" >Cancel</button></td></Link>}
 
+  {/* 
+     {(item.price && !item.paid) && <Link to={`/dashboard/payment/${item._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
+                                    {(item.price && a.paid) && <div>
+                                        <p><span className='text-success'>Paid</span></p>
+                                        <p>Transaction id: <span className='text-success'>{a.transactionId}</span></p>
+                                    </div>}
   
+  */}
         
       </tr>
         
